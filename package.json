@@ -1,0 +1,40 @@
+{
+	"name": "nodecg-sample-vue-parcel",
+	"private": true,
+	"version": "0.0.1",
+	"scripts": {
+		"start": "(cd ../.. && node index.js)",
+		"postinstall": "yarn build",
+		"bundle": "node script/bundle.js",
+		"build": "NODE_ENV=production yarn bundle"
+	},
+	"nodecg": {
+		"compatibleRange": "^1.0.0",
+		"graphics": [
+			{
+				"file": "hello.html",
+				"width": 1280,
+				"height": 720
+			}
+		],
+		"dashboardPanels": [
+			{
+				"name": "clock-ctrl",
+				"title": "Clock Controller",
+				"width": 4,
+				"headerColor": "#20ACA3",
+				"file": "clock-ctrl.html"
+			}
+		]
+	},
+	"dependencies": {
+		"vue": "^2.5.16",
+		"vue-hot-reload-api": "^2.3.0",
+		"vuetify": "^1.1.8"
+	},
+	"devDependencies": {
+		"@vue/component-compiler-utils": "^2.1.0",
+		"parcel-bundler": "^1.9.7",
+		"vue-template-compiler": "^2.5.16"
+	}
+}
